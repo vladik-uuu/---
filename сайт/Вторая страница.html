@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+ <head>
+
+  <script type="text/javascript" src="https://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      $('<style>'+
+        '.scrollTop{ display:none; z-index:9999; position:fixed;'+
+          'bottom:100px; left:90%; width:88px; height:125px;'+
+          'background:url(arrow.png) 0 0 no-repeat; }' +
+        '.scrollTop:hover{ background-position:0 -133px;}'
+      +'</style>').appendTo('body');
+      var
+      speed = 550,
+      $scrollTop = $('<a href="#" class="scrollTop">').appendTo('body');		
+      $scrollTop.click(function(e){
+        e.preventDefault();
+        $( 'html:not(:animated),body:not(:animated)' ).animate({ scrollTop: 0}, speed );
+      });
+    
+      //появление
+      function show_scrollTop(){
+        ( $(window).scrollTop() > 330 ) ? $scrollTop.fadeIn(700) : $scrollTop.fadeOut(700);
+      }
+      $(window).scroll( function(){ show_scrollTop(); } );
+      show_scrollTop();
+    });
+    </script>
+
+  <title>Сайт-визитка</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+   * {
+    box-sizing: border-box;
+   }
+  .menu {
+   float: left;
+   width: 20%;
+  }
+  .menuitem {
+   padding: 8px;
+   margin-top: 7px;
+   border-bottom: 1px solid #f1f1f1;
+  }
+  .main {
+   float: left;
+   width: 60%;
+   padding: 0 20px;
+   overflow: hidden;
+  }
+  .right {
+   background-color: lightblue;
+   float: left;
+   width: 40%;
+   padding: 10px 15px;
+   margin-top: 7px;
+ }
+
+  @media only screen and (max-width:800px) {
+   /* Для планшетов: */
+   .main {
+     width: 80%;
+     padding: 0;
+   }
+   .right {
+    width: 100%;
+    }
+   }
+  @media only screen and (max-width:500px) {
+   /* Для мобильных телефонов: */
+   .menu, .main, .right {
+     width: 100%;
+   }
+  }
+ </style>
+ </head>
+
+  <body style="font-family:Verdana;">
+
+   <div style="background-color:#f1f1f1;padding:15px;text-align:center;">
+    <h1>Сайт-визитка</h1>
+  
+   </div>
+
+   
+
+    <div class="main">
+     <h2>Семестровая работа 2 курс</h2>
+     <p>Проект по созданию сайта с использованием CSS, HTML, JavaScript.
+     </p>
+     <img src="chelovechek_v_galstuke.jpg" style="width:100%">
+    </div>
+
+   <div class="right">
+    <h2>Кто?</h2>
+    <p>Привет, я занимаюсь версткой адаптивных сайтов по макету.</p>
+    <h2>Что?</h2>
+    <p>Работаю в сфере уже 1364657668 лет и имею огромный опыт.</p>
+    <h2>Цена?</h2>
+    <p>Цена состовляет ровно 9870808790$ за страницу сайта</p>
+   </div>
+  </div>
+  <div align="center"><img   style="width:50%" style="height:50%"></div>
+  
+  
+  
+ 
+  
+
+  <div style="background-color:#e5e5e5;text-align:center;padding:20px;margin-top:7px;">
+  <a href="Главная страница.html"> 1 Страница</a>
+  <a href="Вторая страница.html"> 2 Страница</a>
+  <a href="Третья страница.html"> 3 Страница</a>
+  
+  </div>
+  
+  
+
+
+  
+ </body>
+</html>
+
+
+  
+ </body>
+</html>
